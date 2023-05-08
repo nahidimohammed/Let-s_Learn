@@ -1,0 +1,11 @@
+[
+    {
+        "id" : 1 ,
+         "name" : "My Personal" ,
+          "websiteLink" : "https://nahidimohammed.github.io/Mohammed-Nahidi/" ,
+          "gitHubLink":"https://github.com/nahidimohammed/Mohammed-Nahidi.git",
+          "description" :"Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic nemo consectetur reiciendis pariatur placeat laudantium asperiores laborum provident dolor nostrum? Qui ad minima nemo distinctio illo architecto? Saepe, harum beatae.",
+          "imgLocation" : "imgs/ProjectsScreenshot/ScreenshotPersonalWebsite.png",
+          "technology": ["HTML" , "CSS" , "JAVASCRIPT"]
+     }
+]

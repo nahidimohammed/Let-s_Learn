@@ -1,0 +1,313 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+header {
+    background-color:rgb(240, 226, 215) ;
+    display: block;
+    width: 100%;
+    height: 700px;
+    position: relative;
+}
+header > div {
+    position: absolute;
+    left:50% ;
+    width :203px;
+    height: 100px;
+    background-color:rgb(246, 238, 232) ;
+    transform: translate(-50%,-50%);
+    border-radius:100px  100px 0 0 ;
+    opacity: 1;
+    top: 20%;
+    z-index: 1;
+    box-shadow: 1px rgb(246, 238, 232) inset ;
+}
+header > div:nth-child(1) {
+    top: 10%;
+    transform: translate(-50% , -50%);
+    width: 100px;
+    height: 50px;
+    border-radius:100px  100px 0 0 ;
+    animation-name: MiniTop;
+    animation-duration: 1s;
+}
+header > div:nth-child(2) {
+    animation-name: topMotion;
+    animation-duration: 1s;
+}
+header > div:nth-child(4){
+    top: 60% ;
+    transform: translate(-50% , -50%) rotate(180deg);
+    transform-origin: center;
+    animation-name: BottomMotion;
+    animation-duration: 1s;
+}
+header > div:nth-child(5){
+    top: 70% ;
+    transform: translate(-50% , -50%) rotate(180deg) ;
+    transform-origin:center;
+    width: 100px;
+    height: 50px;
+    border-radius:100px  100px 0 0 ;
+    animation-name: MiniBottom;
+    animation-duration: 1s;
+}
+
+header > div:nth-child(6){
+    background-color: transparent;
+    display: inline;
+    top: 90%;
+    pointer-events: inherit;
+}
+
+header > div:nth-child(6) > h1 {
+    color: green;
+    text-align: center;
+    pointer-events: none;
+}
+header > div:nth-child(6) > span{
+    display: block;
+    position: relative;
+    padding: 10px;
+    background-color: transparent;
+    border: 1px solid transparent;
+}
+
+header > div:nth-child(6) > span::before,
+header > div:nth-child(6) > span::after {
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-width: 10px;
+  border-color: transparent;
+}
+
+header > div:nth-child(6) > span::before {
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50% , -50%);
+  border-top-color: green;
+  animation-name: linetobottom;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+
+}
+@keyframes linetobottom {
+    0% {
+        top: 10px ;
+    }
+    50% {
+        top: 0px;
+    }
+    100% {
+        top: 10px;
+    }
+}
+header > div:nth-child(6) > span::after {
+  top: -18px;
+  left: 50%;
+  transform: translateX(-50% );
+  border-top-color: transparent;
+}
+header > img {
+    height: 200px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    border-radius: 100%;
+    border: 3px solid rgb(246, 238, 232);
+    box-shadow: 1px black inset ;
+    animation-name: ImgOpacity;
+    animation-duration: 1s;
+}
+@keyframes ImgOpacity {
+    0%   {opacity: 0;}
+    100% {opacity: 1;}
+  }
+@keyframes topMotion {
+    0% {
+        top:32%;
+        
+    }
+    100%{
+        top: 20%;
+    }
+}
+@keyframes MiniTop{
+    0% {
+        top:40%;
+        
+    }
+    100%{
+        top: 10%;
+    }
+}
+@keyframes BottomMotion {
+    0% {
+        top:48%;
+        
+    }
+    100%{
+        top: 60%;
+    }
+}
+@keyframes MiniBottom{
+    0% {
+        top:50%;
+        
+    }
+    100%{
+        top: 70%;
+    }
+}
+
+
+main {
+    display: flex;
+    width: 100%;
+    max-width: 2200px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+main > div {
+    display: inline-block;
+    flex: 1 0 600px;
+    max-width: 800px;
+    margin: 10px;
+    height: 300px;
+    background-color: #ccc;
+    position: relative;
+}
+
+main > div > div {
+    position: absolute;
+    bottom: 0px;
+    height: 40px;
+    background-color: rgba(246, 238, 232, 0.9);
+    width: 100%;
+    transition: all 0.5s;
+    overflow: hidden;
+}
+main > div:hover div{
+    transition: all 0.5s;
+    bottom:0px;
+    height: 300px;
+}
+
+main > div > div > h1{
+    color:black;
+    display: inline-block;
+}
+main > div > div > a{
+    display: inline-block;
+    padding: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #ccc;
+    background-color: green;
+}
+
+.moveToRight {
+    margin-left: 40px;
+
+}
+
+
+footer {
+    margin-bottom: 0px;
+    font-size: 1.2em;
+}
+
+footer > div {
+    margin: 30px;
+    display: flex;
+    background-color: #ccc;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+footer > div > img {
+    width: 200px;
+    margin: 10px;
+    border-radius: 50%;
+}
+footer > div > div {
+    margin: 10px;
+}
+footer > div > div > p {
+    margin-bottom: 20px;
+}
+
+footer > div > div > a {
+    
+    background-color: green ;
+    border-radius: 10px;
+    padding:10px;
+    text-decoration: none;
+    color: #ccc;
+}
+
+
+@media only screen and (max-width: 600px) 
+{
+    main > div {
+        flex : 1 0 100%;
+    }
+    footer > div {
+        flex-wrap: wrap;
+    }
+    footer > div > img {
+        margin-inline: auto;
+    }
+    footer > div > div > h1 {
+        text-align: center;
+    }
+    footer > div > div > p {
+        text-align: center;
+    }
+    footer > div > div > a {
+        display: block;
+        width: fit-content;
+        margin-inline: auto;
+    }
+}
+
+
+.search{
+    padding : 10px;
+    margin: 10px;
+    margin-top:20px ;
+    text-align: center;
+    font-size: 1.2rem;
+    background-color: rgba(246, 238, 232, 0.9);
+    border-radius: 50px;
+}
+
+.search > input {
+    padding: 5px;
+    width: 50%;
+    background-color: transparent;
+    border: none;
+    border-bottom: #ccc 1px solid;
+    outline: none;
+}
+
+.search > select {
+    padding: 5px;
+    border-radius: 0pc;
+}
+.search > select > option {
+    border-radius: 0px;
+}
+.search > button {
+    border-radius: 5px;
+    padding-inline: 10px;
+    padding: 7px;
+    background-color: #ccc;
+    border: none;
+}
